@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ana Luisa ❤️</title>
 
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0d0d0d;
+    color: #00ff88;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.terminal {
+    width: 100%;
+    max-width: 700px;
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0,255,136,0.3);
+    box-sizing: border-box;
+}
+
+.heart {
+    color: #ff4d6d;
+    font-size: 50px;
+    text-align: center;
+}
+
+#texto {
+    white-space: pre-line;
+    line-height: 1.7;
+}
+
+.final {
+    color: #ff4d6d;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="terminal">
+    <div class="heart">❤️</div>
+    <div id="texto"></div>
+    <div id="final" class="final"></div>
+</div>
+
+<script>
+const mensagem = `
+> iniciando love.exe...
+
+> destinatária: Ana Luisa
+> carregando sentimentos...
+> ████████████████████ 100%
+
+Ana Luisa,
+
+Eu poderia escrever milhares de linhas de código,
+mas nenhuma seria suficiente para explicar
+o quanto você é especial para mim.
+
+Se meu coração fosse um programa,
+você seria a única variável
+que eu nunca gostaria de apagar. ❤️
+
+STATUS: apaixonado
+ERRO: não consigo parar de pensar em você.
+
+>>> declaração concluída...
+`;
+
+const declaracao = `
+Ana Luisa, eu te amo. ❤️
+
+Espero que um dia eu possa me casar com você
+e continuar escrevendo nossa história juntos. 💍❤️
+`;
+
+let i = 0;
+
+function escrever() {
+    if (i < mensagem.length) {
+        document.getElementById("texto").textContent += mensagem[i];
+        i++;
+        setTimeout(escrever, 25);
+    } else {
+        document.getElementById("final").textContent = declaracao;
+    }
+}
+
+escrever();
+</script>
+
+</body>
+</html>
